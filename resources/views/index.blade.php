@@ -87,7 +87,7 @@
   </div>
                            
 </div>
-                         <h5>NOTICES </h5>
+                         <h5>NOTICES {{$arrErrosBytype[3]->total}}</h5>
                     </div>
                 </div>
                  <div class="col-md-3 col-sm-3 col-xs-6">
@@ -98,7 +98,7 @@
   </div>
                            
 </div>
-                         <h5>CRITICALS </h5>
+                         <h5>CRITICALS {{$arrErrosBytype[1]->total}}</h5>
                     </div>
                 </div>
                  <div class="col-md-3 col-sm-3 col-xs-6">
@@ -109,7 +109,7 @@
   </div>
                            
 </div>
-                         <h5>WARNINGS </h5>
+                         <h5>WARNINGS {{$arrErrosBytype[0]->total}}</h5>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
@@ -120,16 +120,12 @@
   </div>
                            
 </div>
-                         <h5>ERRORS </h5>
+                         <h5>ERRORS  {{$arrErrosBytype[2]->total}}</h5>
+
                     </div>
                 </div>
 
             </div>
-
-
-
-             
-           
             <div class="row">
                 <div class="col-md-12">
 
@@ -147,24 +143,19 @@
                                         <tr>
                                             <td>{{$log['date']}} </td>
                                             <td>
-                                                
-                                              
-                                              @if ($log['error_type'] === 1)
+                                              @if ($log['error_type'] == 1)
                                                 <label class="label label-warning">Warning </label>
-                                              @elseif($log['error_type'] === 2)
+                                              @elseif($log['error_type'] == 2)
                                                   <label class="label label-danger">Critical </label>   
-                                              @elseif($log['error_type'] === 3)
+                                              @elseif($log['error_type'] == 3)
                                                   <label class="label label-success">Error </label>   
-                                              @elseif($log['error_type'] === 4)
+                                              @elseif($log['error_type'] == 4)
                                               <label class="label label-success">Notice </label>   
-
                                               @endif
-                                              
                                             </td>
                                             <td>
-                                                <label class="label label-success">{{$log['description']}}</label></td>
-                                            <td>01/25/2015</td>
-                                             <td> <a href="#"  class="btn btn-xs btn-danger"  >View</a> </td>
+                                                {{$log['description']}}
+                                            </td>
                                         </tr>
                                         @endforeach
                                         
@@ -180,7 +171,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    &copy; 2016 Add ON</a>
+                    &copy; {{date('Y')}} Add ON</a>
                 </div>
 
             </div>
