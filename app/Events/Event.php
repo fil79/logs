@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Wadsys\Events;
 
 abstract class Event
 {

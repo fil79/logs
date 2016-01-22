@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace Wadsys\Jobs;
 
 use Illuminate\Bus\Queueable;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Wadsys\Http\Controllers;
 use View;
-use App\Logs;
+use Wadsys\Logs;
 
 class logsController extends Controller
 {
