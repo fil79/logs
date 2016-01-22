@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Wadsys;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 class Logs extends Model
